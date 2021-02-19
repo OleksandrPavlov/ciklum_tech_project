@@ -1,0 +1,13 @@
+<configuration>
+    <appender name="AppExecutionLogger" class="ch.qos.logback.core.FileAppender">
+        <file>app_execution.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info,debug">
+        <appender-ref ref="AppExecutionLogger"/>
+    </root>
+</configuration>
